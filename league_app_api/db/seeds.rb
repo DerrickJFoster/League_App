@@ -5,3 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+Champion.create([
+  {
+    name: 'Aatrox',
+    leagueId: 'Aatrox',
+    key: 266
+  }
+  ])
+
+Item.create([
+  {
+    name: 'Boots of Speed'
+  }
+  ])
