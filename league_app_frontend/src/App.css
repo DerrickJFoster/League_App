@@ -1,33 +1,73 @@
-.App {
+body {
+  background: black;
+  color: white;
+  clear: both;
+
+}
+
+div{
+  border: 1px solid transparent;
+}
+
+header {
+  font-size: 5em;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+#right {
+  float:right;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* MY CHAMPS */
+.myChampCards{
+  width: 20%;
+  background-color: grey;
+  border-radius: 10px;
+  height: 70px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 9px;
+  margin-right: 1%;
+  margin-top: 1%;
+}
+
+.myChampCards:hover p {
+  display: inline-block;
   color: white;
+  line-height: normal;
 }
 
-.App-link {
-  color: #61dafb;
+.myChampCards:hover {
+  height: auto;
+  width: 49%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+/* ALL CHAMPS */
+.champCards{
+  width: 20%;
+  background-color: grey;
+  border-radius: 10px;
+  height: 50px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 9px;
+  margin-left: 1%;
+  margin-top: 1%;
+}
+
+p {
+  display: none;
+}
+
+.champCards:hover p {
+  display: inline-block;
+  color: white;
+  line-height: normal;
+}
+
+.champCards:hover {
+  height: auto;
+  width: 49%;
 }
