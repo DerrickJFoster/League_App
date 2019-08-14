@@ -20,17 +20,19 @@ class Champions extends Component {
   render() {
     return (
       this.state.data ?
-      <>
+      <div className='allChampContainer'>
         {Object.entries(this.state.data.data).map(champion => {
           return (
-            <div key={champion.id} className='champCards'>
-              <h2>{champion[0]}</h2>
-              <p>{champion[1].blurb}</p>
+            <div className='Champions'>
+              <div key={champion.id} className='champCards'>
+                <h2>{champion[0]}</h2>
+                <p>{champion[1].blurb}</p>
+              </div>
             </div>
            )
         })
       }
-      </>
+    </div>
       :null
     )
   }

@@ -8,18 +8,20 @@ class App extends Component {
 
   render() {
     return (
-      <>
+      <div className='page'>
       <header>Welcome to Champ-companion</header>
         <div>
           <MyChampions />
         </div>
 
-
         <div>
           <Champions />
         </div>
-
-      </>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+      </div>
     )
   }
 }

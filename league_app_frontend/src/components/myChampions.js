@@ -7,6 +7,7 @@ class MyChampions extends Component {
 
    componentDidMount() {
      this.getChampion()
+     this.getItem()
    }
 
    getChampion = () => {
@@ -16,24 +17,41 @@ class MyChampions extends Component {
        .catch(err => console.log(err))
    }
 
+   getItem = () => {
+     fetch('http://localhost:3000/items')
+       .then(response => response.json())
+       .then(json => this.setState({items: json}))
+       .catch(err => console.log(err))
+   }
+
 
   render() {
     return (
-      this.state.champions ?
-      <>
-        {this.state.champions.map(champion => {
+<div className="myChampContainer">
+      {this.state.champions ?
+
+        this.state.champions.map((champion, index) => {
           return (
-            <div key={champion.id} className='myChampCards' id='right'>
-
-              <h1>Your Champions</h1>
+            <div key={champion.id} className='myChampCards'>
               <h3>Name: {champion.name}</h3>
-
             </div>
            )
         })
-      }
-      </>
       :null
+    }
+
+      {this.state.items ?
+
+        this.state.items.map(item => {
+        return (
+          <div key={item.id} className='myChampCards'>
+            <h2>{item.name}</h2>
+          </div>
+        )
+      })
+      :null
+    }
+</div>
     )
   }
 }
