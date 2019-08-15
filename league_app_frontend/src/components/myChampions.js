@@ -24,34 +24,61 @@ class MyChampions extends Component {
        .catch(err => console.log(err))
    }
 
+   handleAddChamp() {
+     console.log('Champion added');
+   }
+   handleAddItem() {
+     console.log('Item added');
+   }
 
   render() {
     return (
+      <>
+      <form>
+      <label>Add champions and items to your list</label>
+      <br/>
+      <input placeholder='Champion Name'/>
+      <input placeholder='Items List'/>
+      </form>
+      <button type='submit'>Add to list</button>
+      {/* <button onClick={this.handleAddChamp}>Add Champ</button> */}
+      {/* <button onClick={this.handleAddItem}>Add Item</button> */}
 <div className="myChampContainer">
       {this.state.champions ?
 
         this.state.champions.map((champion, index) => {
           return (
+        <>
+          {/* <button>Edit Champ</button> */}
             <div key={champion.id} className='myChampCards'>
               <h3>Name: {champion.name}</h3>
             </div>
+
+        </>
            )
         })
       :null
-    }
 
+    }
+</div>
+<div className='myChampItemsContainer'>
       {this.state.items ?
 
         this.state.items.map(item => {
         return (
-          <div key={item.id} className='myChampCards'>
-            <h2>{item.name}</h2>
+          <>
+          {/* <button>Edit Item</button> */}
+
+          <div key={item.id} className='myChampItems'>
+            <h3>Items: {item.name}</h3>
           </div>
+        </>
         )
       })
       :null
     }
-</div>
+  </div>
+</>
     )
   }
 }
