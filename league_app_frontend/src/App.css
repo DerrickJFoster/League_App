@@ -52,7 +52,7 @@ header {
   vertical-align: middle;
   line-height: 9px;
   margin-right: 1%;
-  margin-top: 3%;
+  margin-top: 1%;
   margin-left: 2%;
   background: #076976;
   line-height: 0px;
@@ -93,6 +93,7 @@ header {
   float: right;
   width: 50%;
   font-size: 2em;
+  margin-top: 1%;
 }
 .myChampItemsContainer {
   display: flex;
